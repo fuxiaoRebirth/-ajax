@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	Ajax
+一.原生ajax.
+1.创建异步对象:
+Var  xhr = XMLHttpRequest()
+2.通过异步对象发送请求:
+Xhr.open(“请求方式”,”请求地址”)
+Xhr.open(“post”,”xxx.php”)
+3.如果是POST请求就要设置请求头,get请求不需要设置:
+Xhr.setRequestHeader(“content-type”,”application/x-www-form-urlencoded”)
+4.通过异步对象传送数据,必须是字符串格式:
+Xhr.send(“uname=”name)
+5.通过异步对象监听事件,看数据有没有完全返回:
+Xhr.onreadystatechange=function(){
+If(xhr.status==200 &&  xhr.readystate = =4){
+如果进入成功就代表数据已经接受成功.
+Var data = Xhr.responseText
+}
+}
+</body>
+</html>
